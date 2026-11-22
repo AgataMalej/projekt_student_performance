@@ -21,4 +21,6 @@ gg_miss_var(dane)
 
 ```{R}
 vis_miss(dane)
+
+gg_miss_fct(x=dane, fct = Gender)
 ```
