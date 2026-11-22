@@ -2,7 +2,7 @@
 title: "RAPORT"
 output: html_document
 ---
-
+```{r}
 dane <- read.csv("StudentPerformanceFactors.csv")
 View(dane)
 
@@ -17,3 +17,4 @@ colSums(is.na(dane))
 naniar::gg_miss_var(dane)
 
 gg_miss_var(dane)
+```
