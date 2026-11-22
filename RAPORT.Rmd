@@ -3,3 +3,17 @@ title: "RAPORT"
 output: html_document
 ---
 
+dane <- read.csv("StudentPerformanceFactors.csv")
+View(dane)
+
+for (kolumna in names(dane)) {
+  if (is.character(dane[[kolumna]])) {
+    puste <- grepl("^[\\h\\v]*$", dane[[kolumna]], perl = TRUE)
+    dane[[kolumna]][puste] <- NA_character_
+  }
+}
+
+colSums(is.na(dane))
+naniar::gg_miss_var(dane)
+
+gg_miss_var(dane)
