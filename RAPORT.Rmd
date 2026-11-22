@@ -3,3 +3,10 @@ title: "RAPORT"
 output: html_document
 ---
 
+```{r}
+library(naniar)
+dane <- read.csv("StudentPerformanceFactors.csv")
+
+gg_miss_var(dane)
+
+```
