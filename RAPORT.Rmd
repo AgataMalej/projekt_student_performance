@@ -18,3 +18,7 @@ naniar::gg_miss_var(dane)
 
 gg_miss_var(dane)
 ```
+
+```{R}
+vis_miss(dane)
+```
