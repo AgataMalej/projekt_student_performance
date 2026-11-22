@@ -19,8 +19,23 @@ naniar::gg_miss_var(dane)
 gg_miss_var(dane)
 ```
 
-```{R}
+```{r}
 vis_miss(dane)
 
 gg_miss_fct(x=dane, fct = Gender)
 ```
+```{r}
+library(tidyverse)
+dane %>%
+  group_by(Parental_Involvement) %>%
+  miss_var_summary()
+
+```
+
+```{r}
+gg_miss_span(dane,
+             Gender,
+             span_every = 1,
+             facet = Learning_Disabilities)
+```
+
